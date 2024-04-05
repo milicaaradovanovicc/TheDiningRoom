@@ -1,0 +1,36 @@
+<div class="restoran col-11">
+  <h4>{{ restaurant.name }}</h4>
+  <div class="row">
+    <div class="col">
+      {{ restaurant.description }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="row">
+      <div class="col">
+        Rating:
+        <img
+          src="../../../assets/images/star-full.png"
+          *ngFor="let n of brojUArray(restaurant.rating)"
+        />
+        <img
+          src="../../../assets/images/star-empty.png"
+          *ngFor="let n of brojUArray(5 - restaurant.rating)"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        Price:
+        <img
+          src="../../../assets/images/coin-full.png"
+          *ngFor="let n of brojUArray(restaurant.price)"
+        />
+        <img
+          src="../../../assets/images/coin-empty.png"
+          *ngFor="let n of brojUArray(5 - restaurant.price)"
+        />
+      </div>
+    </div>
+  </div>
+</div>

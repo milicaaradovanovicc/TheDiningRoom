@@ -1,0 +1,19 @@
+<h2 class="mi-5">The Dining Room</h2>
+<ul class="nav flex-column">
+  <li class="nav-item">
+    <a [routerLink]="['/home']" class="nav-link">Home</a>
+  </li>
+  <hr />
+  <li class="nav-item">
+    <a [routerLink]="['/restaurants']" class="nav-link">Restaurants</a>
+  </li>
+  <hr />
+  <li class="nav-item" *ngFor="let cus of cuisines">
+    <a [routerLink]="['/restaurants', cus]" class="nav-link">{{ cus }}</a>
+  </li>
+  <hr />
+  <li class="nav-item">
+    <a [routerLink]="['/about']" class="nav-link">About</a>
+  </li>
+  <hr />
+</ul>

@@ -1,0 +1,14 @@
+<button
+  class="btn btn-primary"
+  (click)="onBtnClick(page - 1)"
+  [disabled]="page < 2"
+>
+  Previous
+</button>
+<button
+  class="btn btn-primary"
+  (click)="onBtnClick(page + 1)"
+  [disabled]="page * pageSize >= collectionSize"
+>
+  Next
+</button>
